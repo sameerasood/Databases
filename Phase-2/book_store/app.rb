@@ -8,6 +8,6 @@ sql = 'SELECT id, title FROM books;'
 result = DatabaseConnection.exec_params(sql, [])
 
 # Print out each record from the result set .
-result.each do |book|
+result.all.each do |book|
   p book
 end

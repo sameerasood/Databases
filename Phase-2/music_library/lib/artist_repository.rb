@@ -16,4 +16,18 @@ class ArtistRepository
       end
       return artists
     end
+
+    def find(id)
+      sql = 'SELECT name, genre FROM artists where id = $1'
+      sql_params = [id]
+      result = DatabaseConnection.exec_params(sql, sql_params)
+
+      record = result[0]
+
+      artist = Artist.new
+      artist.name = record['name']
+      artist.genre = record['genre']
+
+      return artist
+    end
 end
