@@ -25,6 +25,6 @@ describe RecipeRepository do
     repo = RecipeRepository.new
     recipe = repo.find(2)
     expect(recipe.recipe_name).to eq 'Chicken salad' #=> 'Chicken salad'
-    expect(recipe.rating).to eq 2 #=> 2
+    expect(recipe.rating).to eq '2' #=> 2
   end
 end

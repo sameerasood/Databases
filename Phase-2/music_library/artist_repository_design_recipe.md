@@ -140,6 +140,14 @@ artist = repo.find(1)
 artist[1].name #=> 'Kate Perry'
 artist[1].genre #=> 'pop'
 
+#3 Create new album
+repo = ArtistRepository.new
+album = Album.new
+album.title = 'Trompe le Monde'
+album.release_year = 1991
+album.release_id = 1
+repo.create(album)
+all_albums = repo.all
 
 
 

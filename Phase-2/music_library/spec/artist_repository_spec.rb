@@ -35,4 +35,13 @@ RSpec.describe ArtistRepository do
     expect(artist.name).to eq 'Coldplay'
     expect(artist.genre).to eq 'Yellow'
   end
+
+  it 'creates new album in the array'
+    repo = ArtistRepository.new
+    album = Album.new
+    expect(album.title).to eq 'Trompe le Monde'
+    expect(album.release_year).to eq 1991
+    expect(album.artist_id).to eq 1
+    repo.create(album)
+    all_albums = repo.all
 end

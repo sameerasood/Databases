@@ -30,4 +30,7 @@ class ArtistRepository
 
       return artist
     end
+
+    def create(album)
+    end
 end
