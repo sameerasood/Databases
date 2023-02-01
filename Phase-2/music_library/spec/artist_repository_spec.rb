@@ -12,7 +12,6 @@ RSpec.describe ArtistRepository do
     reset_artists_table
   end
 
-
   it 'returns the list of artists' do
     repo = ArtistRepository.new
     artists = repo.all
@@ -26,22 +25,13 @@ RSpec.describe ArtistRepository do
     repo = ArtistRepository.new
     artist = repo.find(1)
     expect(artist.name).to eq 'Kate Perry'
-    expect(artist.genre).to eq 'Roar'
+    expect(artist.genre).to eq 'pop'
   end
 
   it 'returns the second artist from the list' do
     repo = ArtistRepository.new
     artist = repo.find(2)
     expect(artist.name).to eq 'Coldplay'
-    expect(artist.genre).to eq 'Yellow'
+    expect(artist.genre).to eq 'rock'
   end
-
-  it 'creates new album in the array'
-    repo = ArtistRepository.new
-    album = Album.new
-    expect(album.title).to eq 'Trompe le Monde'
-    expect(album.release_year).to eq 1991
-    expect(album.artist_id).to eq 1
-    repo.create(album)
-    all_albums = repo.all
 end
